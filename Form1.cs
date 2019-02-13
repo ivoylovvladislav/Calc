@@ -103,6 +103,7 @@ namespace Calc
             a = Convert.ToSingle(tbxResult.Text);
             calcOperator = calcOperators.coSubstract;
             tbxResult.Clear();
+            br = false;
         }
 
         private void btnMul_Click(object sender, EventArgs e)
@@ -110,6 +111,7 @@ namespace Calc
             a = Convert.ToSingle(tbxResult.Text);
             calcOperator = calcOperators.coMultiply;
             tbxResult.Clear();
+            br = false;
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
@@ -117,6 +119,17 @@ namespace Calc
             a = Convert.ToSingle(tbxResult.Text);
             calcOperator = calcOperators.coDivide;
             tbxResult.Clear();
+            br = false;
+        }
+
+        private void btnClearOne_Click(object sender, EventArgs e)
+        {
+            tbxResult.Clear();
+        }
+
+        private void btnBackspace_Click(object sender, EventArgs e)
+        {
+            tbxResult.Text = tbxResult.Text.Remove(0, 1);            
         }
 
         private void btnFesult_Click(object sender, EventArgs e)
